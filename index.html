@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website - Svourenos Michail Valter</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/aefdc01107.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="images/logo.jpeg" class="logo">
+            <ul id="sidemenu"> 
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Skills</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <i class="fa-solid fa-xmark fas" style="color: #fff;" onclick="closemenu()"></i>
+            </ul>
+            <i class="fa-solid fa-bars fas" style="color: #ff004f;" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+            <p>Software Developer</p>
+            <h1>Hi im <span>Michalis</span><br>Svourenos</h1>
+        </div>
+    </div>
+    </div>
+
+<!----------------about------------------------->
+<div id="about">
+    <div class="contrainer">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/face.png">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About me</h1>
+                <p>Overview of my skills and experience</p>
+
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education | Work</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Coding</span><br>Python | Java | C | SQL</li>
+                        <li><span>Web Development</span><br>Website design | Web application programming</li>
+                        <li><span>App Development</span><br>Development of mobile applications</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>Coding</span><br>Developed Machine Learning algorithms | Java & C applications</li>
+                        <li><span>Web Development</span><br>Created multiple websites including this one</li>
+                        <li><span>App Development</span><br>Published fully functioning applications on the Google Play Store</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>Bachelor's degree</span><br>Applied Computer Science <br>University of Macedonia</li>
+                        <li><span>4 years of experience as Receptionist</span><br>Developed great teamwork & communication skills</li>
+                        <li><span>Military obligations</span><br>Fullfilled</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!----------------services------------------------->
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My skills</h1>
+        <div class="services-list">
+            <div>
+                <i class="fa-sharp fa-solid fa-code" style="color: #ff004f;"></i>
+                <h2>Web Development</h2>
+                <p>Hands on experience with Javascript, Angular, React, Springboot</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-rocket" style="color: #ff004f;"></i>
+                <h2>App Development</h2>
+                <p>Programmed, designed and published multiple mobile applications.</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-sliders" style="color: #ff004f;"></i>
+                <h2>Programming Languages</h2>
+                <p>Experienced with Python, Java, C and how to efficiently solve programming problems.</p>
+                <a href="#">Learn more</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!----------------portfolio------------------------->
+
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My work - Programming</h1>
+        <div class="work-list">
+            <div class="work">  
+                <img src="images/lane_detection_thumbnail.png" alt="">
+                <div class="layer">
+                    <h2>Lane Detection</h2>
+                    <p>Lane and car detection in images with python using openCV.</p>
+                    <a href="lane-detection.html"><i class="fa-solid fa-arrow-up-right-from-square" style="color: #ff004f;"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/austronaut.gif" alt="">
+                <div class="layer">
+                    <h2>Website design</h2>
+                    <p>Responsive website with Javascript and CSS.</p>
+                    <a href=""><i class="fa-solid fa-arrow-up-right-from-square" style="color: #ff004f;"></i></a>
+                </div>
+            </div>
+            <div class="work"> 
+                <img src="images/hyperkill-static.png" alt="">   
+                <div class="layer">
+                    <h2>Eon sin</h2>
+                    <p>2d platformer. PC game currently in development.</p>
+                    <a href=""><i class="fa-solid fa-arrow-up-right-from-square" style="color:#ff004f;"></i></a>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="button">See more</a>
+    </div>
+</div>
+
+<!----------------portfolio apps------------------------->
+
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My work - Applications</h1>
+        <div class="work-list">
+            <div class="work">  
+                <img src="images/hyperkill.gif" alt="">
+                <div class="layer">
+                    <h2>Hyperkill</h2>
+                    <p>Fast paced infinite sidescroller game for Android devices. <br> Coming soon!</p>
+                    <a href=""><i class="fa-solid fa-arrow-up-right-from-square" style="color: #ff004f;"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/austronaut.gif" alt="">
+                <div class="layer">
+                    <h2>Climb the Tower</h2>
+                    <p>Android game with multiple characters.<br>Published on the Google play store.</p>
+                    <a href=""><i class="fa-solid fa-arrow-up-right-from-square" style="color: #ff004f;"></i></a>
+                </div>
+            </div>
+            <div class="work"> 
+                <img src="images/hyperkill-static.png" alt="">   
+                <div class="layer">
+                    <h2>Eon sin</h2>
+                    <p>2d platformer. PC game currently in development.</p>
+                    <a href=""><i class="fa-solid fa-arrow-up-right-from-square" style="color:#ff004f;"></i></a>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="button">See more</a>
+    </div>
+</div>
+
+<!----------------contact------------------------->
+
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact me</h1>
+                <p><i class="fa-solid fa-square-envelope" style="color: #ff004f;"></i>michalissvourenos@gmail.com</p>
+                <div class="linkedin">
+                    <a href="https://www.linkedin.com/in/svourenos-michalis/"><i class="fa-brands fa-linkedin" style="color: #ff004f;"></i>LinkedIn</a>
+                </div>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your message"></textarea>
+                    <button type="submit" class="button button2">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="copyright">
+    <p><i class="fa-solid fa-laptop-code" style="color: #ff004f;"></i>Website by Michalis Svourenos</p>
+</div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

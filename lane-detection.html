@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lane Detection</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/aefdc01107.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="images/logo.jpeg" class="logo">
+            <ul id="sidemenu"> 
+                <li><a href="index.html#header">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#services">Skills</a></li>
+                <li><a href="index.html#portfolio">Portfolio</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <i class="fa-solid fa-xmark fas" style="color: #fff;" onclick="closemenu()"></i>
+            </ul>
+            <i class="fa-solid fa-bars fas" style="color: #ff004f;" onclick="openmenu()"></i>
+        </nav>
+        <div class="overview">
+            <h1>Lane and car detection with <span>Python</span> and <span>OpenCV</span></h1>
+            <p>This post will cover how to use the OpenCV library to detect lanes and cars in an image.
+            </p>
+        </div>
+    </div>
+</div>
+
+
+<div class="post-block">
+    <div class="container">
+        <h1>Image Analysis</h1>
+        <img src="images/lane-detection-post/lane_detection_base.jpg" alt="">
+       
+        <p>Lets take the above image as an example. Notable information about the image: </p>
+            <ul>
+                <li>The image shows the drivers point of view.</li>
+                <li>The car is on a road with two lanes.</li>
+                <li>A car is approaching from the opposite lane.</li>
+            </ul>
+        <p>In the first step we will process the image to predict the lane edges.To achieve that we will use some of openCV's built in methods. 
+            With <span>cv2.cvtColor</span> and <span>cv2.GaussianBlur</span> we convert the image to grayscale and then blur it to reduce noise. 
+            Finally with <span>cv2.Canny(blur,50,150)</span> we mark the areas where the gradient is bigger than 50. <br>
+            These steps essentially isolate the edges in the image. 
+        </p>
+        <img src="images/lane-detection-post/edges.png" alt="">
+        <p> The image still contains a lot of information that is not needed. We have to isolate the part of the image where to road is located.</p>
+        <img src="images/lane-detection-post/region of interest.png" alt="">
+        <p>Looking at the image part we can locate a long line that represents the right side of the lane. The road in the image is old and the left line 
+            separating the lanes is not visible. In the above exapmple it is rather easy for the human eye to detect the straight line representing the 
+            right side of the road however a computer does not process visual data in the same way. 
+        </p>
+        <p>Using the <span>HoughLinesP</span> method we can get a list of all continous lines in the image aswell. By tweaking the function's parameters we 
+        can set the minimum line length and the maximum gap allowed between two points for them to be considered a line. After getting the list of lines we can
+        process them until we arrive at the lines most likely to represent the side of a lane. Some of those processing techiques include:
+        <ul>
+            <li>Comparing multiple smaller lines with the same angle to check if they belong to a bigger line.</li>
+            <li>Discarding lines with too small or too high angles.</li>
+            <li>Predicting the expected position of the left side of a lane based on the right (or the reverse).</li>
+        </ul>
+        <img src="images/lane-detection-post/lanes.png" alt="">
+        <p>The above image shows the results of the predictions.</p>
+        <h1>Combining lane detection with object detection using YOLOv5</h1>
+        <p>
+            Using a convolutional neural network such as the YOLOv5 (You Only Look Once) model we can predict the location of cars in the image. Using this information
+            we can then estimate the car distance from the driver aswell as the lanes the detected cars are currently on. 
+        </p>
+        <img src="images/lane-detection-post/final image.png" alt="">
+        <p>The full code of the project can be found in my <a href="https://github.com/SvourenosMichail/car-and-lane-detection">github repo.</a></p>
+    </div>
+</div>
+    
+</body>
+</html>
