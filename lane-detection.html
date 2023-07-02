@@ -12,7 +12,7 @@
 <div id="header">
     <div class="container">
         <nav>
-            <img src="images/logo.jpeg" class="logo">
+            <img src="" class="logo">
             <ul id="sidemenu"> 
                 <li><a href="index.html#header">Home</a></li>
                 <li><a href="index.html#about">About</a></li>
@@ -23,11 +23,21 @@
             </ul>
             <i class="fa-solid fa-bars fas" style="color: #ff004f;" onclick="openmenu()"></i>
         </nav>
-        <div class="overview">
+        <div class="header-text-2">
             <h1>Lane and car detection with <span>Python</span> and <span>OpenCV</span></h1>
-            <p>This post will cover how to use the OpenCV library to detect lanes and cars in an image.
-            </p>
         </div>
+    </div>
+</div>
+
+<div class="post-block">
+    <div class="container">
+        <h1>Overview</h1>
+        <p>I have developed a program that utilizes OpenCV to detect road lanes. By leveraging computer vision techniques,
+             my program can analyze images or video frames and identify the lane markings on the road surface. This technology plays a 
+             crucial role in autonomous vehicles and advanced driver assistance systems. By accurately detecting road lanes, the 
+             program assists in lane keeping, lane departure warning, and other intelligent features that enhance road safety. This functionality is 
+             then combinded with the YOLOv5 neural network to detect cars and estimate their distance form the driver.
+        </p>
     </div>
 </div>
 
@@ -75,5 +85,6 @@
     </div>
 </div>
     
+    <script src="scripts.js"></script>
 </body>
 </html>
