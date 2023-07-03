@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Climb the Tower</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/aefdc01107.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="" class="logo">
+            <ul id="sidemenu"> 
+                <li><a href="index.html#header">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#services">Skills</a></li>
+                <li><a href="index.html#portfolio">Portfolio</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <i class="fa-solid fa-xmark fas" style="color: #fff;" onclick="closemenu()"></i>
+            </ul>
+            <i class="fa-solid fa-bars fas" style="color: #ff004f;" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text-2">
+            <h1>Development of <span>Climb the Tower</span></h1>
+        </div>
+    </div>
+</div>
+
+<div class="post-block">
+    <div class="container">
+        <h1>Overview</h1>
+        <p>Climb the Tower is a mobile game I developed and published on Google Play. It was developed in Gamemaker Studio 2 which 
+            uses an object oriented language. I created this app to gain experience and a deeper understanding of how to structure an
+            app. Within a 10-day timeframe I created the code, graphics and UI for this application.
+        </p>
+    </div>
+
+    <div class="container">
+        <h1>Dividing development into pieces</h1>
+        <p>In order to create this app within the timeframe I split development into key parts:
+            <ul>
+                <li>Day 1: Plan out the general idea of the game. This includes: gameplay, aesthetic and goals.</li>
+                <li>Day 2: Code a prototype.</li>
+                <li>Day 3: Refine gameplay.</li>
+                <li>Day 4: Design and program UI elements. This includes: main menu, options and buttons.</li>
+                <li>Day 5: Design game graphics. This includes: backgrounds, characters and UI visuals.</li>
+                <li>Day 6: Program characters and their different abilites.</li>
+                <li>Day 7: Program different gamemodes and a shop where the player can unlock the characters.</li>
+                <li>Day 8: Implement mobile advertisements with the Google Admob API.</li>
+                <li>Day 9: Fix bugs and finalize project.</li>
+                <li>Day 10: Publish the application on Google Play.</li>
+            </ul>
+            <p>Following this list I had a plan and could use my time efficiently. </p>
+        </p>
+    </div>
+
+    <div class="container">
+        <h1>Dividing development into pieces</h1>
+        <p>In order to create this app within the timeframe I split development into key parts:
+            <ul>
+                <li>Day 1: Plan out the general idea of the game. This includes: gameplay, aesthetic and goals.</li>
+                <li>Day 2: Code a prototype.</li>
+                <li>Day 3: Refine gameplay.</li>
+                <li>Day 4: Design and program UI elements. This includes: main menu, options and buttons.</li>
+                <li>Day 5: Design game graphics. This includes: backgrounds, characters and UI visuals.</li>
+                <li>Day 6: Program characters and their different abilites.</li>
+                <li>Day 7: Program different gamemodes and a shop where the player can unlock the characters.</li>
+                <li>Day 8: Implement mobile advertisements with the Google Admob API.</li>
+                <li>Day 9: Fix bugs and finalize project.</li>
+                <li>Day 10: Publish the application on Google Play.</li>
+            </ul>
+            <p>Following this list I had a plan and could use my time efficiently. </p>
+        </p>
+    </div>
+
+    <div class="container">
+        <h1>Rapid prototyping</h1>
+        <p>During application developement it is vital to create a functioning prototype as early as possible. Sometimes an idea
+            sounds good on paper but is flawed in practice. Building a quick prototype that showcases the basic functionalities of
+            the app can help the developer recognise problems in the early stages.
+        </p>
+        <p>Climb the Tower is a game of infinite stairs. The user has to use 2 buttons to climb the Tower's platforms in order to 
+            get a high score. The main challenge was to create a way to easily generate platforms for the player to climb. I achieved this 
+            using a script that manages a list containing the 6 next platforms. The reason I chose the number 6 is because that is the amount 
+            of platforms rendered on the screen. Every time the user presses a button to jump the list gets updated. The last platform gets 
+            'poped' from the list and a new one is added on top. In order to randomize the position every platform is assigned either the number 1 or
+            -1. This number defines if it would be on the left or right of the previous platform. This approach has several benefits:
+            <ul>
+                <li>By tracking only 6 platforms we do not have a problem with memory management. This is important as the game can technically go on forever.</li>
+                <li>The platform list only has to track a single value: 1 or -1. This makes understanding the game state very simple.</li>
+            </ul>
+        </p>
+        <img src="images/climb the tower/climb_the_tower_1.png" alt="">
+        <p>In the above image we can see the platforms aswell as a bronze coin. If the player reaches the coin he gains a point. After collecting 
+            enough coins he can unlock new characters in the shop. To add coins I just had to update the information stored in platform list. Instead 
+        of just storing the 1 or -1 value I also stored an additional value representing the reward on the platform.</p>
+    </div>
+
+    <div class="container">
+        <h1>Character Design</h1>
+        <img src="images/climb the tower/the-goons.png" alt="">
+        <p>These are some of the characters I designed. It is importand for the character to stand out in the game so the player can easily distinguish 
+            their position in the game. Every character has a unique ability and animation. 
+        </p>
+    </div>
+
+    <div class="container">
+        <h1>Google Admob</h1>
+        <p>The game uses Google Admob to serve advertisments and monetise the application. Interstitial ads are served every 4th time the player fails. 
+            After every failed attempt the player is given the option to watch a rewarded ad that doubles the coins he collected. A Async event is called after 
+            the ad is complete and the coins are added to his account.
+        </p>
+        <div class="social">
+            <a href="https://play.google.com/store/apps/details?id=com.haarpgames.ClimbtheTower&hl=en&gl=US"><i class="fa-brands fa-google-play" style="color: #ff004f;"></i> Google Play store</a>
+        </div>
+    </div>
+
+<div class="copyright">
+    <p><i class="fa-solid fa-laptop-code" style="color: #ff004f;"></i>Website by Michalis Svourenos</p>
+</div>
+</div>
+
+
+    <script src="scripts.js"></script>
+</body>
+</html>
