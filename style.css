@@ -265,9 +265,6 @@ nav ul li a:hover::after{
     background: linear-gradient(hsla(0, 0%, 100%, 0),#ff005198);
 }
 
-.layer:hover{
-    
-}
 
 .layer h2{
     color: #fff;
@@ -558,6 +555,10 @@ nav .fas{
 }
 
 
+.post-block .container .project-button{
+    color: #fff;
+}
+
 
 @media only screen and (max-width:600px){
     #header{
@@ -654,3 +655,14 @@ nav .fas{
         margin-bottom: 10px;
       }
 }
+
+
+.slideshow{
+    height:100vh;
+    width:100vh;
+    background-color: black;
+    overflow: hidden;
+
+}
+
+
