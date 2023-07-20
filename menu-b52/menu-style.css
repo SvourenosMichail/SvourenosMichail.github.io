@@ -1,0 +1,244 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial';
+  box-sizing: border-box;
+}
+
+:root {
+  --red: #FE0000;
+  --yellow: #FFE569;
+  --white: #fff;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+span{
+  color: var(--red);
+}
+
+body{
+  background: #080808;
+  color: #fff; 
+}
+
+#header{
+  width: 100%;
+  background-image: url();
+  background-size: cover;
+  background-position: center;
+}
+
+.container{ 
+  padding: 5%;
+}
+
+
+nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.logo{
+  width: 140px;
+  font-size: 25px;
+}
+
+nav ul li{
+  display: inline-block;
+  list-style: none;
+  margin: 10px 20px;
+}
+
+nav ul li a{
+  color: var(--white);
+  text-decoration: none;
+  font-size: 18px;
+  position: relative;
+}
+
+nav ul li a::after{
+  content: '';
+  width: 0%;
+  height: 3px;
+  background: var(--red);
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  transition: 0.3s;
+}
+
+nav ul li a:hover::after{
+  width: 100%;
+}
+
+.header-text{
+  margin-top: 20%;
+  font-size: 30px;
+}
+
+
+.header-text h1{
+  font-size: 60px;
+  margin-top: 20px;
+}
+
+.header-text h1 span{
+  color: var(--red);
+}
+
+.header-text-2{
+  margin-top: 30%;
+  font-size: 30px;
+}
+
+.header-text-2 h1{
+  font-size: 60px;
+}
+
+#cocktails{
+  margin-top: 50px;
+  display: flex;
+  justify-content: center; /* Center items horizontally */
+  align-items: center; /* Center items vertically */
+}
+
+#cocktails .container .cocktail-header {
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 40px;
+  font-size: 30px;
+  margin-top: 40px;
+  color: var(--yellow);
+}
+
+#cocktails .container .cocktail-type  {
+  margin-bottom: 50px
+}
+
+
+nav .fas{
+  display: none;
+}
+
+
+#msg{
+  color: var(--red);
+  margin-top: -40px;
+  display: block;
+}
+
+#mobile-menu{
+  font-size: 35px;
+}
+
+
+@media only screen and (max-width:600px){
+  
+  nav .fas{
+      display: block;
+      font-size: 25px;
+      position: fixed;
+      right: 20px;
+      top: 20px;
+  }
+
+  nav ul{
+      background: var(--red);
+      position: fixed;
+      top: 0;
+      right: -200px;
+      width: 200px;
+      height: 100vh;
+      padding-top: 50px;
+      z-index: 2;
+      transition: right 0.3s;
+  }
+
+  nav ul li{
+      display: block;
+      margin: 25px;
+  }
+
+  nav ul .fas{
+      position: absolute;
+      top: 25px;
+      left: 25px;
+      cursor: poi;
+  }
+
+  .layer h2{
+      color: var(--white);
+      font-size: 30px;
+      margin-left: 20px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+  }
+
+  .copyright p{
+      font-size: 14px;
+  }
+
+  #cocktails .container .cocktail-header {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 40px;
+    font-size: 20px;
+    margin-top: 40px;
+  }
+}
+
+.fas{
+  color: var(--red);
+}
+
+
+.copyright{
+  width: 100%;
+  text-align: center;
+  background: #262626;
+  padding: 10px;
+  margin-top: 50px;
+}
+
+.copyright p{
+  font-size: 20px;
+}
+
+.fa-solid.fa-laptop-code{
+  margin-right: 10px;
+}
+
+
+.menu {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.drink {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-top: 1px solid var(--white);
+}
+
+.drink-name {
+  font-weight: bold;
+  flex-grow: 2;
+}
+
+.drink-ingredients {
+  flex-grow: 2;
+  text-align: right;
+}
+
+.drink-price {
+  flex-shrink: 0;
+  margin-left: 20px;
+}
