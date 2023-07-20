@@ -22,7 +22,14 @@ span{
 body{
   background: #080808;
   color: #fff; 
+  overflow-x: hidden;
+  background-position: center;
+  background-size: cover;
+  background-image: url(cocktail-bg.jpg);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
 }
+
 
 #header{
   width: 100%;
@@ -226,6 +233,9 @@ nav .fas{
   align-items: center;
   padding: 10px;
   border-top: 1px solid var(--white);
+  background-color: #ffe66931;
+  color: #fff; 
+  border-radius: 10px;
 }
 
 .drink-name {

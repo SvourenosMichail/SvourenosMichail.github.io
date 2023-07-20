@@ -6,6 +6,7 @@
     <title>B-52 COCKTAIL BAR MENU</title>
     <link rel="stylesheet" href="menu-style.css">
     <script src="https://kit.fontawesome.com/aefdc01107.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
 </head>
 <body>
 
@@ -34,15 +35,39 @@
         </div>
     </div>
 
-   
-    
-
     <div id="cocktails">
         <div class="container">
 
             <div class="cocktail-header">
                 <h1>THE <span>B-52 BAR</span> MENU</h1>
             </div>
+
+            <div id="carouselExample" class="carousel slide">
+              
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="mojito.png" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img src="aperol-spritz.png" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img src="strawberrydaquiri.png" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img src="caipirinhia.png" class="d-block w-100" alt="...">
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+
 
             <div class="cocktail-header" id="cocktail-list">
                 <h1>COCKTAILS</h1>
@@ -141,7 +166,7 @@
                   </div>
 
                   <div class="drink">
-                    <div class="drink-name">>WOO WOO </div>
+                    <div class="drink-name">WOO WOO </div>
                     <div class="drink-ingredients">VODKA, CRANBERRY JUICE, PEACH JUICE </div>
                     <div class="drink-price">$7</div>
                   </div>
@@ -741,5 +766,6 @@
     </div>
         
         <script src="menu-scripts.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
 </body>
 </html>
