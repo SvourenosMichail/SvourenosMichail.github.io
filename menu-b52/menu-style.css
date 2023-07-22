@@ -227,6 +227,11 @@ nav .fas{
     font-size: 20px;
     margin-top: 40px;
   }
+
+  .cocktail-header h1{
+    font-size: 60px;
+    font-weight: 900;
+  }
 }
 
 .fas{
