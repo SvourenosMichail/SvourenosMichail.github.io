@@ -33,9 +33,6 @@ body{
 
 #header{
   width: 100%;
-  background-image: url();
-  background-size: cover;
-  background-position: center;
 }
 
 .container{ 
@@ -107,6 +104,31 @@ nav ul li a:hover::after{
   font-size: 60px;
 }
 
+
+.carousel-item .carousel-caption h5{
+  font-size: 40px;
+  font-weight: 700;
+  color: var(--yellow);
+  text-shadow:
+    -2px -2px 0 #000,
+    2px -2px 0 #000,
+    -2px 2px 0 #000,
+    2px 2px 0 #000;  
+}
+
+.cocktail-header {
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 40px;
+  margin-top: 100px;
+  color: var(--yellow);
+}
+
+.cocktail-header h1{
+  font-size: 40px;
+  font-weight: 900;
+}
+
 #cocktails{
   margin-top: 50px;
   display: flex;
@@ -118,9 +140,13 @@ nav ul li a:hover::after{
   margin-left: 10px;
   margin-right: 10px;
   margin-bottom: 40px;
-  font-size: 30px;
   margin-top: 40px;
   color: var(--yellow);
+}
+
+#cocktails .container .cocktail-header h1{
+  font-size: 40px;
+  font-weight: 900;
 }
 
 #cocktails .container .cocktail-type  {
@@ -210,7 +236,8 @@ nav .fas{
   text-align: center;
   background: #262626;
   padding: 10px;
-  margin-top: 50px;
+  margin-top: 100px;
+  color: #fff;
 }
 
 .copyright p{
