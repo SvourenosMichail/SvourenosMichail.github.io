@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Climb the Tower</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/aefdc01107.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="index.html#header">Home</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#services">Skills</a></li>
+                    <li><a href="index.html#portfolio">Portfolio</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                    <i class="fa-solid fa-xmark fas" style="color: #fff;" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars fas" style="color: #ff004f;" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text-2">
+                <h1>AI generated <span>QR code </span>menu</h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-block">
+        <div class="container">
+            <h1>Summary</h1>
+            <p>
+                By integrating QR codes into physical menus or restaurant tables, customers can effortlessly
+                access an interactive and visually appealing digital menu on their smartphones. The menu presents a
+                comprehensive array of beverage options, complete with enticing images, prices and ingredients. This 
+                solution not only streamlines the ordering process but
+                also allows for easy updates and customization of offerings. Additionally, the contactless nature of the
+                QR code menu enhances safety and hygiene in a post-pandemic world.
+            </p>
+
+            <p>
+                Aside from having improved functionality using responsive design and a sidebar menu the customer can access this menu using an AI
+                generated QR code. This code is more visually appealing and memorable. Both codes below are scannable and lead
+                <a href="https://www.svourenos.com/menu-b52/menu-b52.html">to the digital menu.</a> <br>
+                The menu is optimized for mobile display.
+
+                <div class="button-container">
+                    <div class="container">
+                        <h2>Normal QR:</h2>
+                        <img src="menu-b52/qr-code.png" alt="">
+                    </div>
+
+                    <div class="container">
+                        <h2>Ai QR code:</h2>
+                        <img src="menu-b52/b52 qr.png" alt="">
+                    </div>
+                </div> 
+            </p>
+
+            <p>After installing a QR Code Conditioned ControlNet Model for Stable Diffusion the user
+                can enter prompts and alter certain variables in order to get a desired result. Installation
+                information: <br><br> 
+                Stable diffusion: <a href="https://huggingface.co/docs/optimum/main/habana/tutorials/stable_diffusion">https://huggingface.co/docs/optimum/main/habana/tutorials/stable_diffusion</a> <br>
+                <br>QR model: <a href="https://huggingface.co/DionTimmer/controlnet_qrcode-control_v1p_sd15">https://huggingface.co/DionTimmer/controlnet_qrcode-control_v1p_sd15</a> <br>
+                <br>
+                
+            </p>
+        </div>
+
+
+    </div>
+    <div class="copyright">
+        <p><i class="fa-solid fa-laptop-code" style="color: #ff004f;"></i>Website by Michalis Svourenos</p>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>
